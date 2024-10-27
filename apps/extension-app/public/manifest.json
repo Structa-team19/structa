@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Structa",
+  "description": "Organiza tu estudio, mejora tu aprendizaje y vence la curva del olvido. Retén un 90% de todo lo que estudias sin complicaciones.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "vite.svg"
+  },
+  "permissions": ["activeTab", "scripting"]
+}
