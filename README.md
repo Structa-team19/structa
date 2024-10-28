@@ -35,7 +35,7 @@ Este es un monorepo creado con Turborepo. La estructura básica del proyecto es 
 ├── apps
 |   ├── structa-api // once implemented
 │   └── structa-extension
-├── packages
+└── packages
     ├── eslint-config
     └── typescript-config
 ```

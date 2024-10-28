@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# Extensión de Structa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es la aplicación de extensión para Structa.
 
-Currently, two official plugins are available:
+## Herramientas, librerías o frameworks utilizados
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- TypeScript
+- TailwindCSS
+- Shadcn
 
-## Expanding the ESLint configuration
+## Arquitectura
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Esta aplicación está construida implementando una arquitectura en capas. Las capas son:
 
-- Configure the top-level `parserOptions` property like this:
+- **view**: esta capa es responsable de la interfaz de usuario.
+- **controller**: esta capa es responsable de entregar las acciones disponibles desde la lógica de negocio.
+- **data**: esta capa es responsable del acceso a datos externos y la conexión con React.
+- **use-cases**: esta capa es responsable de llamar a la lógica de negocio.
+- **domain**: esta capa es responsable de definir la lógica de negocio.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Implementación de la estructura de archivos
+
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+.
+└── feature
+    ├── controller
+    |   └── feature-view-model.ts
+    ├── data
+    |   ├── api-services.ts
+    |   └── feature-state-implementation.ts
+    ├── domain
+    |   ├── feature-entity.ts
+    |   ├── feature-model.ts
+    |   └── feature-store.ts
+    ├── use-cases
+    |   ├── create-feature-use-case.ts
+    |   ├── get-feature-use-case.ts
+    |   ├── update-feature-use-case.ts
+    |   └── delete-feature-use-case.ts
+    └── view
+        └── feature-view.tsx
 ```
