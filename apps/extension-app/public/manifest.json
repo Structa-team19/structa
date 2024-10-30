@@ -8,7 +8,8 @@
   },
   "action": {
     "default_popup": "index.html",
-    "default_icon": "./structa-logo.png"
+    "default_icon": "./structa-logo.png",
+    "default_title": "Structa"
   },
   "background": {
     "service_worker": "./service-worker.js",
