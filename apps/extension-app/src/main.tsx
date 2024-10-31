@@ -1,10 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import CounterView from "@/app/counter/view/counter-view";
+import Note from "./app/note/view";
 import "./index.css";
+import { Layout } from "./app/layout/view";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <CounterView />
+    <Layout>
+      <Note />
+    </Layout>
   </StrictMode>,
 );
