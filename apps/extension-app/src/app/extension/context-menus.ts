@@ -17,3 +17,12 @@ chrome.contextMenus.create({
   contexts: ["all"],
   visible: true,
 });
+
+chrome.contextMenus.onClicked.addListener((info) => {
+  switch (info.menuItemId) {
+    case "screenshot":
+      chrome.tabs.captureVisibleTab((dataUrl) => {
+        console.log(dataUrl);
+      });
+  }
+});

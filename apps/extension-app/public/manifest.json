@@ -16,5 +16,5 @@
     "type": "module"
   },
   "default_locale": "es",
-  "permissions": ["activeTab", "scripting", "contextMenus"]
+  "permissions": ["activeTab", "scripting", "contextMenus", "tabs"]
 }
