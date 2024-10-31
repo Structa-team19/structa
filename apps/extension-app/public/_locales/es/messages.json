@@ -1,0 +1,14 @@
+{
+  "description": {
+    "message": "Organiza tu estudio, mejora tu aprendizaje y vence la curva del olvido. Retén un 90% de todo lo que estudias sin complicaciones."
+  },
+  "create_note": {
+    "message": "Crea una nota"
+  },
+  "copy_text": {
+    "message": "Copiar texto"
+  },
+  "screenshot": {
+    "message": "Tomar captura de pantalla"
+  }
+}

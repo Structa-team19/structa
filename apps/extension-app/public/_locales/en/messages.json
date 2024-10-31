@@ -1,0 +1,14 @@
+{
+  "description": {
+    "message": "Organize your study, improve your learning, and overcome the forgetting curve. Retain 90% of everything you study effortlessly."
+  },
+  "create_note": {
+    "message": "Create a note"
+  },
+  "copy_text": {
+    "message": "Copy text"
+  },
+  "screenshot": {
+    "message": "Take screenshot"
+  }
+}

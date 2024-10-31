@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Structa",
-  "description": "Organiza tu estudio, mejora tu aprendizaje y vence la curva del olvido. Retén un 90% de todo lo que estudias sin complicaciones.",
+  "description": "__MSG_description__",
   "version": "1.0",
   "icons": {
     "128": "./structa-logo.png"
@@ -15,5 +15,6 @@
     "service_worker": "./service-worker.js",
     "type": "module"
   },
+  "default_locale": "es",
   "permissions": ["activeTab", "scripting", "contextMenus"]
 }

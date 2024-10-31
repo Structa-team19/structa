@@ -1,11 +1,19 @@
 chrome.contextMenus.create({
+  id: "create_note",
+  title: chrome.i18n.getMessage("create_note"),
+  contexts: ["all"],
+});
+
+chrome.contextMenus.create({
   id: "copy_text",
-  title: "Copy text to Structa",
-  contexts: ["selection"],
+  title: chrome.i18n.getMessage("copy_text"),
+  contexts: ["all"],
   visible: true,
 });
 
-chrome.contextMenus.onClicked.addListener((info, tab) => {
-  console.log("Copy text", info, tab);
-  // chrome.tabs.sendMessage(tab.id, { action: "copy_text" });
+chrome.contextMenus.create({
+  id: "screenshot",
+  title: chrome.i18n.getMessage("screenshot"),
+  contexts: ["all"],
+  visible: true,
 });
